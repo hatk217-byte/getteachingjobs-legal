@@ -144,7 +144,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- 1. Job Placement -->
-            <a href="{{ url('/v2/services') }}#job-placement" class="p-6 rounded-2xl border-2 border-blue-600/30 bg-slate-50/50 hover:bg-white hover:shadow-md transition group">
+            <a href="{{ url('/v2/services/job-placement') }}" class="p-6 rounded-2xl border-2 border-blue-600/30 bg-slate-50/50 hover:bg-white hover:shadow-md transition group">
                 <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-briefcase"></i>
                 </div>
@@ -152,10 +152,11 @@
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">
                     Connecting teachers with verified public, bilingual, and international schools across Vietnam. 100% free for teachers.
                 </p>
+                <span class="inline-flex items-center text-xs font-semibold text-blue-700 mt-4">Explore teaching jobs &rarr;</span>
             </a>
 
             <!-- 2. Visa Services -->
-            <a href="{{ url('/v2/services') }}#visa-services" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
+            <a href="{{ url('/v2/services/vietnam-visa') }}" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
                 <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-passport"></i>
                 </div>
@@ -163,10 +164,11 @@
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">
                     Fast & reliable assistance for E-visas, DN1 Business Visas, working visa adjustments, and legal extensions.
                 </p>
+                <span class="inline-flex items-center text-xs font-semibold text-amber-700 mt-4">View visa options &rarr;</span>
             </a>
 
             <!-- 3. Legalization -->
-            <a href="{{ url('/v2/services') }}#legalization" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
+            <a href="{{ url('/v2/services/consular-legalization') }}" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
                 <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-stamp"></i>
                 </div>
@@ -174,10 +176,11 @@
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">
                     Authentication of degrees, TEFL certificates, and background checks with official judicial Vietnamese translations.
                 </p>
+                <span class="inline-flex items-center text-xs font-semibold text-emerald-700 mt-4">Check legalization steps &rarr;</span>
             </a>
 
             <!-- 4. COE Support (Filipino) -->
-            <a href="{{ url('/v2/services') }}#coe-support" class="p-6 rounded-2xl border-2 border-amber-500/40 bg-amber-50/20 hover:bg-white hover:shadow-md transition group">
+            <a href="{{ url('/v2/services/filipino-coe') }}" class="p-6 rounded-2xl border-2 border-amber-500/40 bg-amber-50/20 hover:bg-white hover:shadow-md transition group">
                 <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-file-circle-check"></i>
                 </div>
@@ -185,10 +188,11 @@
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">
                     Specialized departure verification and contract alignment to avoid airport delays and offloading in the Philippines.
                 </p>
+                <span class="inline-flex items-center text-xs font-semibold text-amber-800 mt-4">Get Filipino departure support &rarr;</span>
             </a>
 
             <!-- 5. Work Permit & TRC -->
-            <a href="{{ url('/v2/services') }}#work-permit-trc" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
+            <a href="{{ url('/v2/services/work-permit-trc') }}" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
                 <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-id-card-clip"></i>
                 </div>
@@ -196,10 +200,11 @@
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">
                     Case-by-case document auditing, employer coordination, and Temporary Residence Cards (1–2 years).
                 </p>
+                <span class="inline-flex items-center text-xs font-semibold text-purple-700 mt-4">Consult on Work Permit & TRC &rarr;</span>
             </a>
 
             <!-- 6. Other Supports -->
-            <a href="{{ url('/v2/services') }}#other-supports" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
+            <a href="{{ url('/v2/services/relocation-support') }}" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
                 <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-house-user"></i>
                 </div>
@@ -207,6 +212,7 @@
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">
                     Practical on-the-ground relocation assistance through vetted local housing and transportation agents.
                 </p>
+                <span class="inline-flex items-center text-xs font-semibold text-rose-700 mt-4">Ask about relocation &rarr;</span>
             </a>
         </div>
     </div>

@@ -60,8 +60,8 @@
                     <span class="text-xs font-bold uppercase text-slate-400">Available Teaching Offers</span>
                     <div class="text-3xl font-extrabold text-blue-700">100% Free</div>
                     <p class="text-xs text-slate-500">No recruitment commission deducted from teacher salaries.</p>
-                    <a href="{{ url('/v2/your-case') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white transition">
-                        Apply for Jobs Now
+                    <a href="{{ url('/v2/services/job-placement') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white transition">
+                        View Service Page & Apply &rarr;
                     </a>
                 </div>
             </div>
@@ -102,8 +102,8 @@
                     <span class="text-xs font-bold uppercase text-slate-400">Processing Time</span>
                     <div class="text-2xl font-extrabold text-brand-navy">Fast & Standard</div>
                     <p class="text-xs text-slate-500">Expedited options available for urgent departures or renewals.</p>
-                    <a href="{{ url('/v2/your-case') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition">
-                        Get Visa Guidance
+                    <a href="{{ url('/v2/services/vietnam-visa') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition">
+                        View Visa Page & Apply &rarr;
                     </a>
                 </div>
             </div>
@@ -148,8 +148,8 @@
                     <span class="text-xs font-bold uppercase text-slate-400">Turnaround Options</span>
                     <div class="text-2xl font-extrabold text-brand-navy">7–10 Days</div>
                     <p class="text-xs text-slate-500">Express processing available upon request.</p>
-                    <a href="{{ url('/v2/your-case') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition">
-                        Check Document Viability
+                    <a href="{{ url('/v2/services/consular-legalization') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition">
+                        View Legalization Page &rarr;
                     </a>
                 </div>
             </div>
@@ -190,8 +190,8 @@
                     <span class="text-xs font-bold uppercase text-amber-700">Dedicated Filipino Desk</span>
                     <div class="text-2xl font-extrabold text-brand-navy">Hassle-Free</div>
                     <p class="text-xs text-slate-500">Avoid airport delays and travel with complete peace of mind.</p>
-                    <a href="{{ url('/v2/your-case') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition">
-                        Consult on Filipino COE
+                    <a href="{{ url('/v2/services/filipino-coe') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition">
+                        View Filipino COE Page &rarr;
                     </a>
                 </div>
             </div>
@@ -228,8 +228,8 @@
                     <span class="text-xs font-bold uppercase text-slate-400">Case Evaluation</span>
                     <div class="text-2xl font-extrabold text-brand-navy">Case-by-Case</div>
                     <p class="text-xs text-slate-500">Every employer sponsorship has distinct province-level criteria.</p>
-                    <a href="{{ url('/v2/your-case') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-purple-600 hover:bg-purple-700 text-white transition">
-                        Submit Your Documents
+                    <a href="{{ url('/v2/services/work-permit-trc') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-purple-600 hover:bg-purple-700 text-white transition">
+                        View Work Permit Page &rarr;
                     </a>
                 </div>
             </div>
@@ -270,8 +270,8 @@
                     <span class="text-xs font-bold uppercase text-slate-400">On-the-ground Help</span>
                     <div class="text-2xl font-extrabold text-brand-navy">Nationwide</div>
                     <p class="text-xs text-slate-500">Hanoi, Da Nang, HCMC & suburban teaching locations.</p>
-                    <a href="{{ url('/v2/your-case') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-rose-600 hover:bg-rose-700 text-white transition">
-                        Ask About Relocation
+                    <a href="{{ url('/v2/services/relocation-support') }}" class="block w-full py-3 rounded-xl text-xs font-bold bg-rose-600 hover:bg-rose-700 text-white transition">
+                        View Relocation Page &rarr;
                     </a>
                 </div>
             </div>

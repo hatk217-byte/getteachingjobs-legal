@@ -17,6 +17,33 @@ Route::prefix('v2')->group(function () {
         return view('v2.services');
     });
 
+    // 6 Dedicated Landing Pages for each Service
+    Route::prefix('services')->group(function () {
+        Route::get('/job-placement', function () {
+            return view('v2.services.job-placement');
+        });
+
+        Route::get('/vietnam-visa', function () {
+            return view('v2.services.vietnam-visa');
+        });
+
+        Route::get('/consular-legalization', function () {
+            return view('v2.services.consular-legalization');
+        });
+
+        Route::get('/filipino-coe', function () {
+            return view('v2.services.filipino-coe');
+        });
+
+        Route::get('/work-permit-trc', function () {
+            return view('v2.services.work-permit-trc');
+        });
+
+        Route::get('/relocation-support', function () {
+            return view('v2.services.relocation-support');
+        });
+    });
+
     Route::get('/your-case', function () {
         return view('v2.your-case');
     });
