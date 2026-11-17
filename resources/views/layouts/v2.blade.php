@@ -92,9 +92,93 @@
                 </div>
             </a>
 
-            <!-- Navigation Links (Individual Dedicated Pages) -->
+            <!-- Navigation Links (Individual Dedicated Pages with Services Dropdown) -->
             <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
-                <a href="{{ url('/v2/services') }}" class="{{ request()->is('v2/services*') ? 'text-blue-700 font-bold' : 'text-slate-600 hover:text-blue-700' }} transition">Services</a>
+                <!-- Services with Rich Dropdown -->
+                <div class="relative group py-2">
+                    <a href="{{ url('/v2/services') }}" class="inline-flex items-center gap-1.5 {{ request()->is('v2/services*') ? 'text-blue-700 font-bold' : 'text-slate-600 hover:text-blue-700' }} transition">
+                        <span>Services</span>
+                        <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-blue-700 group-hover:rotate-180 transition-transform duration-200"></i>
+                    </a>
+
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 top-full pt-2 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-2.5 space-y-1">
+                            <a href="{{ url('/v2/services/job-placement') }}" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-blue-50/60 transition group/item">
+                                <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center text-sm shrink-0">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-bold text-xs text-brand-navy group-hover/item:text-blue-700 transition">1. Job Placement</span>
+                                        <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-blue-100 text-blue-700">Free</span>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500">School matching across Vietnam</p>
+                                </div>
+                            </a>
+
+                            <a href="{{ url('/v2/services/vietnam-visa') }}" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-amber-50/60 transition group/item">
+                                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center text-sm shrink-0">
+                                    <i class="fa-solid fa-passport"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <span class="font-bold text-xs text-brand-navy group-hover/item:text-amber-800 transition">2. Vietnam Visa Services</span>
+                                    <p class="text-[11px] text-slate-500">E-visa, DN1 business & extensions</p>
+                                </div>
+                            </a>
+
+                            <a href="{{ url('/v2/services/consular-legalization') }}" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-emerald-50/60 transition group/item">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm shrink-0">
+                                    <i class="fa-solid fa-stamp"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <span class="font-bold text-xs text-brand-navy group-hover/item:text-emerald-700 transition">3. Consular Legalization</span>
+                                    <p class="text-[11px] text-slate-500">Degrees, TEFL & Judicial translations</p>
+                                </div>
+                            </a>
+
+                            <a href="{{ url('/v2/services/filipino-coe') }}" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-amber-50 transition group/item border border-transparent hover:border-amber-200">
+                                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center text-sm shrink-0">
+                                    <i class="fa-solid fa-file-circle-check"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-bold text-xs text-brand-navy group-hover/item:text-amber-800 transition">4. Filipino COE Support</span>
+                                        <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-amber-500 text-slate-950">Hot</span>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500">Avoid airport offloading in PH</p>
+                                </div>
+                            </a>
+
+                            <a href="{{ url('/v2/services/work-permit-trc') }}" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-purple-50/60 transition group/item">
+                                <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center text-sm shrink-0">
+                                    <i class="fa-solid fa-id-card-clip"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <span class="font-bold text-xs text-brand-navy group-hover/item:text-purple-700 transition">5. Work Permit & TRC</span>
+                                    <p class="text-[11px] text-slate-500">1–2 year residency guidance</p>
+                                </div>
+                            </a>
+
+                            <a href="{{ url('/v2/services/relocation-support') }}" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-rose-50/60 transition group/item">
+                                <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center text-sm shrink-0">
+                                    <i class="fa-solid fa-house-user"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <span class="font-bold text-xs text-brand-navy group-hover/item:text-rose-700 transition">6. Relocation & Housing</span>
+                                    <p class="text-[11px] text-slate-500">VN police check, apartments, flights</p>
+                                </div>
+                            </a>
+
+                            <div class="pt-2 mt-1 border-t border-slate-100">
+                                <a href="{{ url('/v2/services') }}" class="block p-2 text-center text-xs font-bold text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-xl transition">
+                                    View All Services Overview &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="{{ url('/v2/your-case') }}" class="{{ request()->is('v2/your-case*') ? 'text-blue-700 font-bold' : 'text-slate-600 hover:text-blue-700' }} transition">Your Case</a>
                 <a href="{{ url('/v2/why-us') }}" class="{{ request()->is('v2/why-us*') ? 'text-blue-700 font-bold' : 'text-slate-600 hover:text-blue-700' }} transition">Why Us</a>
                 <a href="{{ url('/v2/useful-guide') }}" class="{{ request()->is('v2/useful-guide*') ? 'text-blue-700 font-bold' : 'text-slate-600 hover:text-blue-700' }} transition">Useful Guide</a>
