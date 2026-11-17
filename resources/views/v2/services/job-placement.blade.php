@@ -74,8 +74,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 1: DETAILED SALARY & TEACHING ENVIRONMENT COMPARISON -->
 <section class="py-16 bg-white border-b border-slate-200">
@@ -221,8 +220,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 3: 6-STAGE RECRUITMENT ROADMAP -->
 <section class="py-16 bg-white border-b border-slate-200">
@@ -265,8 +263,7 @@
                 <p class="text-emerald-800 leading-relaxed">Seamless transition into DN1 Visa / Work Permit processing with your school.</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 4: QUALIFICATIONS & DETAILED FAQS -->
 <section class="py-16 bg-slate-50 border-b border-slate-200">
@@ -309,6 +306,14 @@
                         <p class="text-slate-600 leading-relaxed text-[11px] pl-6">
                             At least two blank pages for entry visas and residence stamps.
                         </p>
+                        <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50 flex items-start gap-3">
+                            <i class="fa-solid fa-shield text-emerald-600 mt-1 text-base"></i>
+                            <div>
+                                <strong class="text-brand-navy">Clean Criminal Record</strong>
+                                <p class="text-slate-600 mt-0.5">Police check from your home country or Vietnamese criminal
+                                    record (Lý Lịch Tư Pháp).</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="p-4 rounded-2xl border border-slate-200 bg-white space-y-1">
@@ -321,7 +326,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
 
             <!-- Right: In-Depth FAQs -->
             <div class="lg:col-span-7 space-y-6">
@@ -361,8 +365,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 5: APPLICATION FORM -->
 <section id="apply" class="py-16 bg-white">
@@ -380,7 +383,7 @@
                     <input type="text" required placeholder="John Mark Doe" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onsubmit="handleJobSubmit(event)" class="space-y-4 text-xs">
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">Passport Nationality *</label>
                         <input type="text" required placeholder="e.g. Philippines, South Africa, UK, USA" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
@@ -395,18 +398,17 @@
                             <option value="Overseas">Currently overseas (planning arrival)</option>
                         </select>
                     </div>
-                </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">WhatsApp / Phone Number *</label>
                         <input type="tel" required placeholder="+84 946 682 798" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
                     </div>
+
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">Email Address *</label>
                         <input type="email" required placeholder="john@example.com" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
                     </div>
-                </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -446,16 +448,15 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 @endsection
 
 @section('scripts')
-<script>
-    function handleJobSubmit(e) {
-        e.preventDefault();
-        e.target.classList.add('hidden');
-        document.getElementById('jobSuccess').classList.remove('hidden');
-    }
-</script>
+    <script>
+        function handleJobSubmit(e) {
+            e.preventDefault();
+            e.target.classList.add('hidden');
+            document.getElementById('jobSuccess').classList.remove('hidden');
+        }
+    </script>
 @endsection

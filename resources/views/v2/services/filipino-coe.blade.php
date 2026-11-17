@@ -58,8 +58,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 1: WHY FILIPINO TEACHERS GET OFFLOADED -->
 <section class="py-16 bg-white border-b border-slate-200">
@@ -101,8 +100,7 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 2: THE COMPLETE FILIPINO DEPARTURE PACKAGE -->
 <section class="py-16 bg-slate-50 border-b border-slate-200">
@@ -165,7 +163,6 @@
                     <strong class="text-brand-navy text-sm block">Original Signed Teaching Contract & COE</strong>
                     <p class="text-slate-600 mt-1 leading-relaxed">Clear color prints with original Vietnamese school seal and designated HR liaison mobile phone.</p>
                 </div>
-            </div>
 
             <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 flex items-start gap-4">
                 <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold shrink-0">2</div>
@@ -173,7 +170,6 @@
                     <strong class="text-brand-navy text-sm block">CHED CAV & DFA Red Ribbon / Apostille</strong>
                     <p class="text-slate-600 mt-1 leading-relaxed">Your bachelor's diploma and transcript of records authenticated by DFA in the Philippines.</p>
                 </div>
-            </div>
 
             <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 flex items-start gap-4">
                 <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold shrink-0">3</div>
@@ -181,7 +177,6 @@
                     <strong class="text-brand-navy text-sm block">120-hour TEFL / LET License</strong>
                     <p class="text-slate-600 mt-1 leading-relaxed">Teaching certificate or PRC Board Licensure Examination for Teachers (LET) results.</p>
                 </div>
-            </div>
 
             <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 flex items-start gap-4">
                 <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold shrink-0">4</div>
@@ -191,8 +186,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 4: FILIPINO DESK FAQS -->
 <section class="py-16 bg-slate-50 border-b border-slate-200">
@@ -243,7 +237,7 @@
                     <input type="text" required placeholder="Maria Elena Santos" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onsubmit="handleCOESubmit(event)" class="space-y-4 text-xs">
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">Departure Airport in the Philippines *</label>
                         <select class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
@@ -261,18 +255,27 @@
                             <option>Looking for teaching jobs in Vietnam first</option>
                         </select>
                     </div>
-                </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block font-bold text-slate-700 mb-1.5">WhatsApp / Phone Number *</label>
-                        <input type="tel" required placeholder="+63 912 345 6789" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1.5">WhatsApp / Phone Number *</label>
+                            <input type="tel" required placeholder="+63 912 345 6789"
+                                class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1.5">Email Address *</label>
+                            <input type="email" required placeholder="maria@example.com"
+                                class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                        </div>
                     </div>
+
                     <div>
-                        <label class="block font-bold text-slate-700 mb-1.5">Email Address *</label>
-                        <input type="email" required placeholder="maria@example.com" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                        <label class="block font-bold text-slate-700 mb-1.5">Target Departure Date & Any Specific
+                            Concerns</label>
+                        <textarea rows="3"
+                            placeholder="Tell us your target travel date, school name in Vietnam (if any), or specific questions about NAIA departure..."
+                            class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition"></textarea>
                     </div>
-                </div>
 
                 <div>
                     <label class="block font-bold text-slate-700 mb-1.5">Target Travel Date & Specific Departure Concerns</label>
@@ -296,16 +299,15 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 @endsection
 
 @section('scripts')
-<script>
-    function handleCOESubmit(e) {
-        e.preventDefault();
-        e.target.classList.add('hidden');
-        document.getElementById('coeSuccess').classList.remove('hidden');
-    }
-</script>
+    <script>
+        function handleCOESubmit(e) {
+            e.preventDefault();
+            e.target.classList.add('hidden');
+            document.getElementById('coeSuccess').classList.remove('hidden');
+        }
+    </script>
 @endsection

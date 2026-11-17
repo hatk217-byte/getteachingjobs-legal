@@ -67,8 +67,7 @@
                 </ul>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 1: VIETNAM POLICE CLEARANCE (LÝ LỊCH TƯ PHÁP SỐ 1) -->
 <section class="py-16 bg-white border-b border-slate-200">
@@ -197,12 +196,12 @@
             <div class="p-6 rounded-2xl border border-emerald-200 bg-emerald-50/40 space-y-2">
                 <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-base">
                     <i class="fa-solid fa-file-contract"></i>
+                    <div class="text-[11px] font-semibold text-amber-800">Fixed rate, no scams</div>
                 </div>
                 <h4 class="font-bold text-emerald-950 text-sm">English Lease Review by Our Desk</h4>
                 <p class="text-emerald-900 leading-relaxed">
                     We review rental contracts before you transfer your deposit. We ensure state-regulated electricity rates (avoiding inflated private sub-meter rates), clear 1-month deposit refund clauses, and a written landlord commitment to complete police registration.
                 </p>
-            </div>
         </div>
     </div>
 </section>
@@ -230,6 +229,7 @@
             <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-xs space-y-3">
                 <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-base">
                     <i class="fa-solid fa-sim-card"></i>
+                    <div class="text-[11px] font-semibold text-emerald-700">Day 1 readiness</div>
                 </div>
                 <h3 class="font-bold text-sm text-brand-navy">High-Speed 5G SIM Cards</h3>
                 <p class="text-slate-600 leading-relaxed">
@@ -247,8 +247,7 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 5: INQUIRY FORM -->
 <section id="relocate-form" class="py-16 bg-white">
@@ -260,10 +259,20 @@
                 <p class="text-xs text-slate-500 mt-1">Select the services you need and our local ground team will contact you within 2 hours.</p>
             </div>
 
-            <form onsubmit="handleRelocateSubmit(event)" class="space-y-4 text-xs">
-                <div>
-                    <label class="block font-bold text-slate-700 mb-1.5">Full Name *</label>
-                    <input type="text" required placeholder="Sarah Jenkins" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-start gap-4">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold shrink-0">
+                        <i class="fa-solid fa-id-badge text-base"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-navy text-sm">Mandatory for Work Permit & TRC</h4>
+                        <p class="text-slate-600 mt-1 leading-relaxed">
+                            To issue a Vietnamese Police Check or Temporary Residence Card, the government requires proof of
+                            online temporary residence registration from your local ward police (Công an phường). If your
+                            landlord fails to register you, your TRC is delayed.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -287,27 +296,87 @@
                         </select>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <!-- Section 3: Relocation Inquiry Form -->
+    <section id="relocate-form" class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="p-8 sm:p-10 rounded-3xl border border-slate-200 bg-slate-50/50 shadow-sm">
+                <div class="text-center max-w-lg mx-auto mb-8">
+                    <span class="text-xs font-bold uppercase tracking-wider text-rose-700">Ground Assistance</span>
+                    <h3 class="text-2xl font-bold text-brand-navy mt-1">Request Relocation Support</h3>
+                    <p class="text-xs text-slate-500 mt-1">Select the services you need and our local coordinator will get
+                        back to you within 2 hours.</p>
+                </div>
+
+                <form onsubmit="handleRelocateSubmit(event)" class="space-y-4 text-xs">
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">WhatsApp / Phone Number *</label>
                         <input type="tel" required placeholder="+84 946 682 798" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
                     </div>
-                    <div>
-                        <label class="block font-bold text-slate-700 mb-1.5">Email Address *</label>
-                        <input type="email" required placeholder="sarah@example.com" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1.5">Destination City *</label>
+                            <select
+                                class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                                <option value="Hanoi">Hanoi</option>
+                                <option value="Da Nang">Da Nang</option>
+                                <option value="Ho Chi Minh City">Ho Chi Minh City</option>
+                                <option value="Hai Phong">Hai Phong / Ha Long</option>
+                                <option value="Other">Other Province</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1.5">Services Needed (Select Primary) *</label>
+                            <select
+                                class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                                <option>Vietnam Police Clearance (Lý Lịch Tư Pháp)</option>
+                                <option>Apartment Rental & Lease Review</option>
+                                <option>Airport Pick-up & Transport</option>
+                                <option>Comprehensive Relocation Package</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1.5">WhatsApp / Phone *</label>
+                            <input type="tel" required placeholder="+84 946 682 798"
+                                class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1.5">Email Address *</label>
+                            <input type="email" required placeholder="sarah@example.com"
+                                class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1.5">Target Move-in Date / Additional
+                            Details</label>
+                        <textarea rows="3"
+                            placeholder="Tell us about your flight arrival time, budget for housing, or urgent police clearance requirements..."
+                            class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition"></textarea>
+                    </div>
 
                 <div>
                     <label class="block font-bold text-slate-700 mb-1.5">Target Flight Arrival Date / Housing Budget / Specific Needs</label>
                     <textarea rows="3" placeholder="Tell us your flight arrival time, monthly housing budget, school location, or specific police clearance requirements..." class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition"></textarea>
                 </div>
 
-                <div class="pt-2">
-                    <button type="submit" class="w-full py-4 rounded-xl font-bold text-sm bg-rose-600 hover:bg-rose-700 text-white transition shadow-sm">
-                        Submit Relocation Request &rarr;
-                    </button>
+                <div id="relocateSuccess" class="hidden text-center py-8 space-y-3">
+                    <div
+                        class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-xl font-bold">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-brand-navy">Relocation Request Received!</h4>
+                    <p class="text-xs text-slate-500 max-w-md mx-auto">
+                        Our local relocation coordinator will reach out to you via WhatsApp with accommodation options and
+                        guidance for your arrival city.
+                    </p>
                 </div>
             </form>
 
@@ -321,16 +390,15 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 @endsection
 
 @section('scripts')
-<script>
-    function handleRelocateSubmit(e) {
-        e.preventDefault();
-        e.target.classList.add('hidden');
-        document.getElementById('relocateSuccess').classList.remove('hidden');
-    }
-</script>
+    <script>
+        function handleRelocateSubmit(e) {
+            e.preventDefault();
+            e.target.classList.add('hidden');
+            document.getElementById('relocateSuccess').classList.remove('hidden');
+        }
+    </script>
 @endsection

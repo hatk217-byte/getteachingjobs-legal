@@ -71,8 +71,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 1: COMPREHENSIVE VISA COMPARISON TABLE -->
 <section class="py-16 bg-white border-b border-slate-200">
@@ -210,12 +209,14 @@
             <div class="p-6 rounded-2xl border border-rose-200 bg-rose-50/40 space-y-2">
                 <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-base">
                     <i class="fa-solid fa-money-bill-wave"></i>
+                    <div class="pt-2 text-[11px] text-slate-500 border-t border-slate-200">
+                        Turnaround: 5–7 working days
+                    </div>
                 </div>
                 <h4 class="font-bold text-rose-900 text-sm">Decree 144 Overstay Fines</h4>
                 <p class="text-rose-800 leading-relaxed">
                     Overstaying in Vietnam incurs automatic administrative fines: 1–15 days (~$20 to $80), 16–29 days (~$150 to $300), and 30+ days (~$400 to $800+ plus forced exit and 3-year entry bans).
                 </p>
-            </div>
 
             <div class="p-6 rounded-2xl border border-rose-200 bg-rose-50/40 space-y-2">
                 <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-base">
@@ -227,8 +228,7 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 4: DETAILED VISA FAQS -->
 <section class="py-16 bg-slate-50 border-b border-slate-200">
@@ -280,16 +280,25 @@
                 <p class="text-xs text-slate-500 mt-1">We verify your passport details and send an upfront transparent quote within 2 hours.</p>
             </div>
 
-            <form onsubmit="handleVisaSubmit(event)" class="space-y-4 text-xs">
-                <div>
-                    <label class="block font-bold text-slate-700 mb-1.5">Full Name (as in passport) *</label>
-                    <input type="text" required placeholder="John Mark Doe" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-start gap-4">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold shrink-0">
+                        <i class="fa-solid fa-triangle-exclamation text-base"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-navy text-sm">Full Name Order Discrepancies</h4>
+                        <p class="text-slate-600 mt-1 leading-relaxed">
+                            A tiny mismatch between the passport machine-readable line (MRZ) and your E-visa application can
+                            result in boarding denial at departure airports. We review every field before filing.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block font-bold text-slate-700 mb-1.5">Passport Nationality *</label>
-                        <input type="text" required placeholder="e.g. UK, South Africa, USA, Philippines" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-start gap-4">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold shrink-0">
+                        <i class="fa-solid fa-clock text-base"></i>
                     </div>
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">Service Required *</label>
@@ -303,17 +312,66 @@
                         </select>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <!-- Section 3: Visa Consultation Form -->
+    <section id="visa-form" class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="p-8 sm:p-10 rounded-3xl border border-slate-200 bg-slate-50/50 shadow-sm">
+                <div class="text-center max-w-lg mx-auto mb-8">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Quick Assessment</span>
+                    <h3 class="text-2xl font-bold text-brand-navy mt-1">Check Your Visa Options</h3>
+                    <p class="text-xs text-slate-500 mt-1">Receive an expert assessment and transparent itemized quote
+                        within 2 hours.</p>
+                </div>
+
+                <form onsubmit="handleVisaSubmit(event)" class="space-y-4 text-xs">
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">WhatsApp / Phone Number *</label>
                         <input type="tel" required placeholder="+84 946 682 798" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
                     </div>
-                    <div>
-                        <label class="block font-bold text-slate-700 mb-1.5">Email Address *</label>
-                        <input type="email" required placeholder="john@example.com" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1.5">Passport Nationality *</label>
+                            <input type="text" required placeholder="e.g. UK, South Africa, USA, Philippines"
+                                class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1.5">Service Needed *</label>
+                            <select
+                                class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                                <option>90-Day E-Visa (Single / Multiple)</option>
+                                <option>DN1 Business Visa Approval Letter</option>
+                                <option>In-Country Visa Extension</option>
+                                <option>Border Run Consultation</option>
+                                <option>Urgent / Emergency Rush Processing</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1.5">WhatsApp / Phone *</label>
+                            <input type="tel" required placeholder="+84 946 682 798"
+                                class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1.5">Email Address *</label>
+                            <input type="email" required placeholder="john@example.com"
+                                class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1.5">Current Location & Visa Expiry (if already in
+                            Vietnam)</label>
+                        <textarea rows="3"
+                            placeholder="Tell us your current location, existing visa stamp date, and intended travel timeline..."
+                            class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition"></textarea>
+                    </div>
 
                 <div>
                     <label class="block font-bold text-slate-700 mb-1.5">Current Location & Visa Expiry (if currently in Vietnam)</label>
@@ -337,16 +395,15 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 @endsection
 
 @section('scripts')
-<script>
-    function handleVisaSubmit(e) {
-        e.preventDefault();
-        e.target.classList.add('hidden');
-        document.getElementById('visaSuccess').classList.remove('hidden');
-    }
-</script>
+    <script>
+        function handleVisaSubmit(e) {
+            e.preventDefault();
+            e.target.classList.add('hidden');
+            document.getElementById('visaSuccess').classList.remove('hidden');
+        }
+    </script>
 @endsection

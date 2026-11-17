@@ -67,8 +67,7 @@
                 </ul>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 1: WORK PERMIT VS TRC COMPARISON -->
 <section class="py-16 bg-white border-b border-slate-200">
@@ -112,8 +111,7 @@
                 </ul>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 2: CHECKLIST OF 5 MANDATORY REQUIREMENTS -->
 <section class="py-16 bg-slate-50 border-b border-slate-200">
@@ -173,8 +171,7 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 3: STEP-BY-STEP OFFICIAL PROCESSING TIMELINE -->
 <section class="py-16 bg-white border-b border-slate-200">
@@ -270,7 +267,7 @@
                     <input type="text" required placeholder="Michael Brown" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onsubmit="handleWpSubmit(event)" class="space-y-4 text-xs">
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">Passport Nationality *</label>
                         <input type="text" required placeholder="e.g. USA, UK, South Africa, Ireland" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
@@ -287,18 +284,20 @@
                             <option value="Overseas">Currently Overseas</option>
                         </select>
                     </div>
-                </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">WhatsApp / Phone Number *</label>
                         <input type="tel" required placeholder="+84 946 682 798" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
                     </div>
+
                     <div>
-                        <label class="block font-bold text-slate-700 mb-1.5">Email Address *</label>
-                        <input type="email" required placeholder="michael@example.com" class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition">
+                        <label class="block font-bold text-slate-700 mb-1.5">Your Sponsoring School & Current Document
+                            Status</label>
+                        <textarea rows="3"
+                            placeholder="Tell us if you have an active employer sponsor, which documents are already legalized, and your target completion timeline..."
+                            class="w-full p-3 rounded-xl border border-slate-200 bg-white focus:outline-blue-600 transition"></textarea>
                     </div>
-                </div>
 
                 <div>
                     <label class="block font-bold text-slate-700 mb-1.5">Your Sponsoring School & Document Status</label>
@@ -322,16 +321,15 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 @endsection
 
 @section('scripts')
-<script>
-    function handleWpSubmit(e) {
-        e.preventDefault();
-        e.target.classList.add('hidden');
-        document.getElementById('wpSuccess').classList.remove('hidden');
-    }
-</script>
+    <script>
+        function handleWpSubmit(e) {
+            e.preventDefault();
+            e.target.classList.add('hidden');
+            document.getElementById('wpSuccess').classList.remove('hidden');
+        }
+    </script>
 @endsection

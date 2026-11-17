@@ -67,8 +67,7 @@
                 </ul>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 1: THE 3-STEP LEGALIZATION PIPELINE EXPLAINED -->
 <section class="py-16 bg-white border-b border-slate-200">
@@ -113,8 +112,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 2: COUNTRY-BY-COUNTRY LEGALIZATION GUIDE -->
 <section class="py-16 bg-slate-50 border-b border-slate-200">
@@ -192,8 +190,7 @@
                 <div class="text-[11px] text-blue-700 font-medium">Turnaround: 5–8 working days</div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- SECTION 3: ORIGINALS VS CERTIFIED COPIES & TIMELINE -->
 <section class="py-16 bg-white border-b border-slate-200">
@@ -245,7 +242,7 @@
                     <input type="text" required placeholder="Jane Smith" class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-blue-600 transition">
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onsubmit="handleLegalizeSubmit(event)" class="space-y-4 text-xs">
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">Issuing Country of Degree *</label>
                         <input type="text" required placeholder="e.g. United Kingdom, South Africa, USA, Philippines" class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-blue-600 transition">
@@ -258,18 +255,21 @@
                             <option>Partially legalized (have Apostille only)</option>
                         </select>
                     </div>
-                </div>
+                    <div class="grid grid-cols-2 gap-3">
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">WhatsApp / Phone Number *</label>
                         <input type="tel" required placeholder="+84 946 682 798" class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-blue-600 transition">
                     </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-700 text-white transition">
+                        Get Document Checklist & Quote
+                    </button>
+
                     <div>
                         <label class="block font-bold text-slate-700 mb-1.5">Email Address *</label>
                         <input type="email" required placeholder="jane@example.com" class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-blue-600 transition">
                     </div>
-                </div>
 
                 <div>
                     <label class="block font-bold text-slate-700 mb-1.5">List Documents to Legalize</label>
@@ -293,16 +293,15 @@
                 </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 @endsection
 
 @section('scripts')
-<script>
-    function handleLegalizeSubmit(e) {
-        e.preventDefault();
-        e.target.classList.add('hidden');
-        document.getElementById('legalizeSuccess').classList.remove('hidden');
-    }
-</script>
+    <script>
+        function handleLegalizeSubmit(e) {
+            e.preventDefault();
+            e.target.classList.add('hidden');
+            document.getElementById('legalizeSuccess').classList.remove('hidden');
+        }
+    </script>
 @endsection
