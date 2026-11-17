@@ -142,78 +142,208 @@
             </a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- 1. Job Placement -->
-            <a href="{{ url('/v2/services/job-placement') }}" class="p-6 rounded-2xl border-2 border-blue-600/30 bg-slate-50/50 hover:bg-white hover:shadow-md transition group">
-                <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-briefcase"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 1. Job Placement (CORE SERVICE) -->
+            <div class="relative flex flex-col justify-between p-7 rounded-3xl border-2 border-blue-500 bg-white shadow-sm hover:shadow-lg transition-all duration-200">
+                <div class="absolute -top-3.5 right-6">
+                    <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-blue-600 text-white shadow-xs">
+                        Core Service
+                    </span>
                 </div>
-                <h3 class="font-bold text-brand-navy text-base group-hover:text-blue-700 transition">1. Job Placement for Teachers</h3>
-                <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Connecting teachers with verified public, bilingual, and international schools across Vietnam. 100% free for teachers.
-                </p>
-                <span class="inline-flex items-center text-xs font-semibold text-blue-700 mt-4">Explore teaching jobs &rarr;</span>
-            </a>
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-navy text-lg">1. Job Placement for Teachers</h3>
+                    <p class="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                        Connect with verified international schools, bilingual academies, and reputable language centers across Vietnam (Hanoi, Da Nang, HCMC & provinces).
+                    </p>
+                    <ul class="space-y-2.5 mt-5 text-xs text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Tailored matching based on your degree & experience</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Support for Native & Non-native English teachers</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Direct interview scheduling with hiring employers</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-100">
+                    <a href="{{ url('/v2/services/job-placement') }}" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-center block bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 transition">
+                        Find Teaching Positions &rarr;
+                    </a>
+                </div>
+            </div>
 
             <!-- 2. Visa Services -->
-            <a href="{{ url('/v2/services/vietnam-visa') }}" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
-                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-passport"></i>
+            <div class="relative flex flex-col justify-between p-7 rounded-3xl border border-slate-200 bg-white shadow-xs hover:shadow-lg transition-all duration-200">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-passport"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-navy text-lg">2. Vietnam Visa Services</h3>
+                    <p class="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                        Fast & reliable processing for all primary visa categories teachers need when entering or residing in Vietnam.
+                    </p>
+                    <ul class="space-y-2.5 mt-5 text-xs text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span><strong>E-visa Support:</strong> Tourist & Working preparation entry</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span><strong>DN1 / Business Visa:</strong> Employer-sponsored approval letters</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span><strong>Working Visa:</strong> Status transitions & urgent extensions</span>
+                        </li>
+                    </ul>
                 </div>
-                <h3 class="font-bold text-brand-navy text-base group-hover:text-blue-700 transition">2. Vietnam Visa Services</h3>
-                <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Fast & reliable assistance for E-visas, DN1 Business Visas, working visa adjustments, and legal extensions.
-                </p>
-                <span class="inline-flex items-center text-xs font-semibold text-amber-700 mt-4">View visa options &rarr;</span>
-            </a>
+                <div class="pt-6 mt-6 border-t border-slate-100">
+                    <a href="{{ url('/v2/services/vietnam-visa') }}" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-center block bg-blue-50/70 hover:bg-blue-100 text-blue-700 border border-blue-200/80 transition">
+                        Explore Visa Options &rarr;
+                    </a>
+                </div>
+            </div>
 
             <!-- 3. Legalization -->
-            <a href="{{ url('/v2/services/consular-legalization') }}" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
-                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-stamp"></i>
+            <div class="relative flex flex-col justify-between p-7 rounded-3xl border border-slate-200 bg-white shadow-xs hover:shadow-lg transition-all duration-200">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-stamp"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-navy text-lg">3. Apostille & Consular Legalization</h3>
+                    <p class="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                        Diplomatic authentication and certified Vietnamese translations so your overseas credentials are recognized by Vietnamese authorities.
+                    </p>
+                    <ul class="space-y-2.5 mt-5 text-xs text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Bachelor's / Master's Degrees & Transcripts</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>TEFL / TESOL / CELTA Teaching Certificates</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Certified judicial translation into Vietnamese</span>
+                        </li>
+                    </ul>
                 </div>
-                <h3 class="font-bold text-brand-navy text-base group-hover:text-blue-700 transition">3. Apostille & Consular Legalization</h3>
-                <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Authentication of degrees, TEFL certificates, and background checks with official judicial Vietnamese translations.
-                </p>
-                <span class="inline-flex items-center text-xs font-semibold text-emerald-700 mt-4">Check legalization steps &rarr;</span>
-            </a>
+                <div class="pt-6 mt-6 border-t border-slate-100">
+                    <a href="{{ url('/v2/services/consular-legalization') }}" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-center block bg-blue-50/70 hover:bg-blue-100 text-blue-700 border border-blue-200/80 transition">
+                        Check Legalization Steps &rarr;
+                    </a>
+                </div>
+            </div>
 
-            <!-- 4. COE Support (Filipino) -->
-            <a href="{{ url('/v2/services/filipino-coe') }}" class="p-6 rounded-2xl border-2 border-amber-500/40 bg-amber-50/20 hover:bg-white hover:shadow-md transition group">
-                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-file-circle-check"></i>
+            <!-- 4. COE Support (Filipino - HIGH DEMAND) -->
+            <div class="relative flex flex-col justify-between p-7 rounded-3xl border-2 border-amber-400 bg-white shadow-sm hover:shadow-lg transition-all duration-200">
+                <div class="absolute -top-3.5 right-6">
+                    <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-amber-500 text-slate-950 shadow-xs">
+                        High Demand
+                    </span>
                 </div>
-                <h3 class="font-bold text-brand-navy text-base group-hover:text-blue-700 transition">4. COE Support (Filipino Teachers)</h3>
-                <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Specialized departure verification and contract alignment to avoid airport delays and offloading in the Philippines.
-                </p>
-                <span class="inline-flex items-center text-xs font-semibold text-amber-800 mt-4">Get Filipino departure support &rarr;</span>
-            </a>
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-navy text-lg">4. COE Support <span class="text-xs font-semibold text-amber-700">(Filipino Teachers Only)</span></h3>
+                    <p class="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                        Specialized, dedicated assistance for Filipino educators transitioning from the Philippines to Vietnam with valid departure verification.
+                    </p>
+                    <ul class="space-y-2.5 mt-5 text-xs text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Certificate of Employment (COE) verification guidance</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Handling complex documentation to avoid flight offloading</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Direct coordination with hiring schools for compliance</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-100">
+                    <a href="{{ url('/v2/services/filipino-coe') }}" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-center block bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 transition">
+                        View Filipino COE Details &rarr;
+                    </a>
+                </div>
+            </div>
 
             <!-- 5. Work Permit & TRC -->
-            <a href="{{ url('/v2/services/work-permit-trc') }}" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
-                <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-id-card-clip"></i>
+            <div class="relative flex flex-col justify-between p-7 rounded-3xl border border-slate-200 bg-white shadow-xs hover:shadow-lg transition-all duration-200">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-id-card-clip"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-navy text-lg">5. Work Permit & TRC Consultation</h3>
+                    <p class="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                        Personalized guidance for the official Work Permit and 1-2 year Temporary Residence Card (TRC) applications.
+                    </p>
+                    <ul class="space-y-2.5 mt-5 text-xs text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Pre-submission audit of your degrees and health check</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Case-by-case evaluation for job changes & renewals</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Step-by-step guidance to avoid rejection penalties</span>
+                        </li>
+                    </ul>
                 </div>
-                <h3 class="font-bold text-brand-navy text-base group-hover:text-blue-700 transition">5. Work Permit & TRC Consultation</h3>
-                <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Case-by-case document auditing, employer coordination, and Temporary Residence Cards (1–2 years).
-                </p>
-                <span class="inline-flex items-center text-xs font-semibold text-purple-700 mt-4">Consult on Work Permit & TRC &rarr;</span>
-            </a>
+                <div class="pt-6 mt-6 border-t border-slate-100">
+                    <a href="{{ url('/v2/services/work-permit-trc') }}" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-center block bg-blue-50/70 hover:bg-blue-100 text-blue-700 border border-blue-200/80 transition">
+                        Consult Work Permit & TRC &rarr;
+                    </a>
+                </div>
+            </div>
 
-            <!-- 6. Other Supports -->
-            <a href="{{ url('/v2/services/relocation-support') }}" class="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-md transition group">
-                <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-house-user"></i>
+            <!-- 6. Other Relocation Supports -->
+            <div class="relative flex flex-col justify-between p-7 rounded-3xl border border-slate-200 bg-white shadow-xs hover:shadow-lg transition-all duration-200">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-house-user"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-navy text-lg">6. Other Expat & Relocation Supports</h3>
+                    <p class="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                        Practical on-the-ground relocation assistance through our network of vetted housing, flight, and transportation agents.
+                    </p>
+                    <ul class="space-y-2.5 mt-5 text-xs text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span><strong>Police Clearance:</strong> VN Criminal Record (Lý Lịch Tư Pháp)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span><strong>Accommodation:</strong> Apartment rentals near your campus</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-emerald-600 mt-0.5 shrink-0"></i>
+                            <span>Airport transfers, local SIM card, and banking setup</span>
+                        </li>
+                    </ul>
                 </div>
-                <h3 class="font-bold text-brand-navy text-base group-hover:text-blue-700 transition">6. Housing, Flights & Airport Pick-up</h3>
-                <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Practical on-the-ground relocation assistance through vetted local housing and transportation agents.
-                </p>
-                <span class="inline-flex items-center text-xs font-semibold text-rose-700 mt-4">Ask about relocation &rarr;</span>
-            </a>
+                <div class="pt-6 mt-6 border-t border-slate-100">
+                    <a href="{{ url('/v2/services/relocation-support') }}" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-center block bg-blue-50/70 hover:bg-blue-100 text-blue-700 border border-blue-200/80 transition">
+                        Explore Relocation Supports &rarr;
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

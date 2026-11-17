@@ -101,11 +101,36 @@
                 <a href="{{ url('/v2/faqs') }}" class="{{ request()->is('v2/faqs*') ? 'text-blue-700 font-bold' : 'text-slate-600 hover:text-blue-700' }} transition">FAQs</a>
             </nav>
 
-            <!-- Header CTA -->
+            <!-- Header CTA & Mobile Hamburger -->
             <div class="flex items-center gap-3">
                 <a href="{{ url('/v2/your-case') }}" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-semibold bg-brand-navy hover:bg-blue-900 text-white shadow-sm hover:shadow transition-all duration-200">
                     Request Consultation
                     <i class="fa-solid fa-arrow-right ml-2 text-xs text-amber-400"></i>
+                </a>
+                <button type="button" onclick="document.getElementById('mobileNavMenu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileNavMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-2 text-sm font-medium shadow-lg">
+            <a href="{{ url('/v2/services') }}" class="block px-3 py-2 rounded-lg {{ request()->is('v2/services*') ? 'bg-blue-50 text-blue-700 font-bold' : 'text-slate-700 hover:bg-slate-50' }}">Services (All 6 Specializations)</a>
+            <div class="pl-6 space-y-1 text-xs text-slate-600">
+                <a href="{{ url('/v2/services/job-placement') }}" class="block py-1 hover:text-blue-700">&bull; 1. Job Placement for Teachers</a>
+                <a href="{{ url('/v2/services/vietnam-visa') }}" class="block py-1 hover:text-blue-700">&bull; 2. Vietnam Visa Services</a>
+                <a href="{{ url('/v2/services/consular-legalization') }}" class="block py-1 hover:text-blue-700">&bull; 3. Apostille & Legalization</a>
+                <a href="{{ url('/v2/services/filipino-coe') }}" class="block py-1 hover:text-blue-700">&bull; 4. COE Support (Filipino Teachers)</a>
+                <a href="{{ url('/v2/services/work-permit-trc') }}" class="block py-1 hover:text-blue-700">&bull; 5. Work Permit & TRC</a>
+                <a href="{{ url('/v2/services/relocation-support') }}" class="block py-1 hover:text-blue-700">&bull; 6. Housing, Flights & Relocation</a>
+            </div>
+            <a href="{{ url('/v2/your-case') }}" class="block px-3 py-2 rounded-lg {{ request()->is('v2/your-case*') ? 'bg-blue-50 text-blue-700 font-bold' : 'text-slate-700 hover:bg-slate-50' }}">Your Case (Consultation)</a>
+            <a href="{{ url('/v2/why-us') }}" class="block px-3 py-2 rounded-lg {{ request()->is('v2/why-us*') ? 'bg-blue-50 text-blue-700 font-bold' : 'text-slate-700 hover:bg-slate-50' }}">Why Us</a>
+            <a href="{{ url('/v2/useful-guide') }}" class="block px-3 py-2 rounded-lg {{ request()->is('v2/useful-guide*') ? 'bg-blue-50 text-blue-700 font-bold' : 'text-slate-700 hover:bg-slate-50' }}">Useful Guide</a>
+            <a href="{{ url('/v2/faqs') }}" class="block px-3 py-2 rounded-lg {{ request()->is('v2/faqs*') ? 'bg-blue-50 text-blue-700 font-bold' : 'text-slate-700 hover:bg-slate-50' }}">FAQs</a>
+            <div class="pt-2 border-t border-slate-100">
+                <a href="https://wa.me/84946682798" target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-emerald-600 text-white font-semibold text-xs">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Coordinator
                 </a>
             </div>
         </div>
@@ -141,12 +166,12 @@
                 <div>
                     <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Our Services</h4>
                     <ul class="space-y-2 text-[11px]">
-                        <li><a href="{{ url('/v2/services') }}#job-placement" class="hover:text-white transition">1. Job Placement for Teachers</a></li>
-                        <li><a href="{{ url('/v2/services') }}#visa-services" class="hover:text-white transition">2. Vietnam Visa (Evisa, DN1, Working)</a></li>
-                        <li><a href="{{ url('/v2/services') }}#legalization" class="hover:text-white transition">3. Apostille & Consular Legalization</a></li>
-                        <li><a href="{{ url('/v2/services') }}#coe-support" class="hover:text-white transition">4. COE Support (Filipino Teachers)</a></li>
-                        <li><a href="{{ url('/v2/services') }}#work-permit-trc" class="hover:text-white transition">5. Work Permit & TRC Consultation</a></li>
-                        <li><a href="{{ url('/v2/services') }}#other-supports" class="hover:text-white transition">6. Housing, Flight & Airport Pick-up</a></li>
+                        <li><a href="{{ url('/v2/services/job-placement') }}" class="hover:text-white transition">1. Job Placement for Teachers</a></li>
+                        <li><a href="{{ url('/v2/services/vietnam-visa') }}" class="hover:text-white transition">2. Vietnam Visa Services</a></li>
+                        <li><a href="{{ url('/v2/services/consular-legalization') }}" class="hover:text-white transition">3. Apostille & Consular Legalization</a></li>
+                        <li><a href="{{ url('/v2/services/filipino-coe') }}" class="hover:text-white transition">4. COE Support (Filipino Teachers)</a></li>
+                        <li><a href="{{ url('/v2/services/work-permit-trc') }}" class="hover:text-white transition">5. Work Permit & TRC Consultation</a></li>
+                        <li><a href="{{ url('/v2/services/relocation-support') }}" class="hover:text-white transition">6. Housing, Flights & Relocation</a></li>
                     </ul>
                 </div>
 
